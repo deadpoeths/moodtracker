@@ -1,0 +1,254 @@
+/* Full screen background image */
+body {
+  background-color: #fdf7ef;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Full-screen container to center content */
+.container-fluid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered content */
+.full-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.col-md-6 {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fdf7ef; /* Light background for readability */
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  min-height: 500px; /* Ensure consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Ensure all sections have the same height and space content evenly */
+ #login-form, #signup-form {
+  min-height: 500px; /* Consistent height for login and signup */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Evenly spaces content vertically */
+  align-items: center;
+}
+
+/* Make the welcome message section smaller */
+#welcome-message {
+  min-height: 300px; /* Smaller height for the welcome message */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Evenly spaces content vertically */
+  align-items: center;
+}
+
+/* Active section visibility */
+#login-form.active, #signup-form.active, #welcome-message.active {
+  display: flex;
+}
+
+/* Input and button styles */
+.input-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.input-group-text {
+  background-color: #f0f0f0; /* Light background for icons */
+  border: 1px solid #ddd; /* Border for the icon container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Icon size adjustment */
+.input-group-text i {
+  font-size: 1.2rem; /* Adjust the size as needed */
+  line-height: 1;    /* Ensure the icons are vertically centered */
+}
+
+/* Style for input fields */
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+/* Buttons style */
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 15px;
+  transition: opacity 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Welcome message styling */
+#login-btn, #signup-btn {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#login-btn:hover, #signup-btn:hover {
+  opacity: 0.9;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tablet screens (up to 1024px) */
+@media (max-width: 1024px) {
+  .col-md-6 {
+    max-width: 60%; /* Reduce width to 60% of the screen */
+    padding: 30px;  /* Adjust padding proportionally */
+  }
+
+  input[type="text"], input[type="password"], input[type="email"] {
+    font-size: 0.95rem; /* Slightly smaller text */
+  }
+
+  button {
+    font-size: 15px; /* Adjust button text size */
+    padding: 8px;    /* Reduce padding for smaller screens */
+  }
+}
+
+/* Mobile screens (up to 768px) */
+@media (max-width: 768px) {
+  .col-md-6 {
+    max-width: 80%; /* Narrower form for smaller devices */
+    padding: 20px;  /* Adjust padding for compactness */
+    border-radius: 8px; /* Slightly smaller corners */
+  }
+
+  input[type="text"], input[type="password"], input[type="email"] {
+    font-size: 0.9rem; /* Slightly smaller inputs */
+  }
+
+  button {
+    font-size: 14px;
+    padding: 7px; /* Compact buttons for smaller screens */
+  }
+}
+
+/* Ultra-small screens (up to 480px) */
+@media (max-width: 480px) {
+  .col-md-6 {
+    max-width: 90%; /* Form almost fills the screen */
+    padding: 15px;  /* Compact padding for very small devices */
+    border-radius: 6px; /* Smaller corners for a sleek look */
+  }
+
+  input[type="text"], input[type="password"], input[type="email"] {
+    font-size: 0.85rem; /* Smaller font for compact screens */
+  }
+
+  button {
+    font-size: 12px; /* Small buttons for ultra-small screens */
+    padding: 6px;    /* Compact padding */
+  }
+}
+
+ /* SVG Rolling Animation */
+ .svg-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.svg-icon {
+  position: absolute;
+  animation: rollInOut 28s linear forwards; /* Adjusted to accommodate new SVG */
+}
+
+/* Delay effect for the second SVG */
+.svg-icon:nth-child(2) {
+  transform: translateX(-200%); /* Start further off-screen left */
+  animation: rollInOutDelayed 28s linear forwards;
+  animation-delay: 3s; /* Reduced delay to 1 second */
+}
+
+/* Delay effect for the third SVG */
+.svg-icon:nth-child(3) {
+  transform: translateX(-300%); /* Start further off-screen left */
+  animation: rollInOutDelayed 28s linear forwards;
+  animation-delay: 5s; /* Reduced delay to 2 seconds */
+}
+
+/* Delay effect for the fourth SVG */
+.svg-icon:nth-child(4) {
+  transform: translateX(-400%); /* Start further off-screen left */
+  animation: rollInOutDelayed 28s linear forwards;
+  animation-delay: 7s; /* Reduced delay to 3 seconds */
+}
+
+/* Delay effect for the fifth SVG */
+.svg-icon:nth-child(5) {
+  transform: translateX(-500%); /* Start further off-screen left */
+  animation: rollInOutDelayed 28s linear forwards;
+  animation-delay: 9s; /* Reduced delay to 4 seconds */
+}
+
+/* Delay effect for the sixth SVG */
+.svg-icon:nth-child(6) {
+  transform: translateX(-600%); /* Start further off-screen left */
+  animation: rollInOutDelayed 28s linear forwards;
+  animation-delay: 11s; /* Reduced delay to 5 seconds */
+}
+
+@keyframes rollInOut {
+  0% {
+    transform: translateX(-100%) rotate(0deg); /* Start off-screen left */
+  }
+  50% {
+    transform: translateX(50vw) rotate(720deg); /* Midway, spinning */
+  }
+  100% {
+    transform: translateX(100vw) rotate(1440deg); /* End off-screen right with more rotations */
+  }
+}
+
+/* Animation for the second SVG, with delayed start */
+@keyframes rollInOutDelayed {
+  0% {
+    transform: translateX(-200%) rotate(0deg); /* Stay further off-screen left initially */
+  }
+  50% {
+    transform: translateX(50vw) rotate(720deg); /* Midway, spinning */
+  }
+  100% {
+    transform: translateX(100vw) rotate(1440deg); /* End off-screen right with more rotations */
+  }
+}
